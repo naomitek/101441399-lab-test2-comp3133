@@ -1,0 +1,158 @@
+/* Container */
+.mission-details-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #2E3B4E;  /* Dark slate background */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for container */
+.mission-details-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Style */
+.back-button {
+  margin-bottom: 20px;
+  background-color: transparent;
+  color: #FF6F61;  /* Coral red */
+  border: 2px solid #FF6F61;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #FF6F61;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Heading Style */
+.heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #F5F5F5; /* Light gray */
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Loading/Error Styles */
+.loading, .error {
+  text-align: center;
+  font-size: 18px;
+  color: #F2A900; /* Yellow for loading */
+}
+
+.error {
+  color: #E53935; /* Red for errors */
+}
+
+/* Details Section Styling */
+.details-content {
+  background-color: #35414F;  /* Darker background for details */
+  color: #E4E4E4;  /* Light text color */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for details */
+.details-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* List Styling */
+.mission-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mission-list-item {
+  background-color: #3C4F63;  /* Lighter dark blue */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+.mission-list-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mission-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.mission-patch img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.mission-info {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.mission-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #FF6F61; /* Coral red */
+}
+
+.mission-info p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #F5F5F5;
+}
+
+/* Section Titles */
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FF6F61;  /* Coral red */
+  margin-bottom: 10px;
+}
+
+/* Paragraph Text */
+p {
+  font-size: 16px;
+  color: #E4E4E4;
+  line-height: 1.6;
+}
+
+/* Links Buttons */
+.links-buttons a {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.links-buttons a mat-icon {
+  margin-right: 8px;
+}
+
+.links-buttons a:hover {
+  background-color: #F5F5F5;
+  color: #2E3B4E;  /* Dark slate text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

@@ -1,0 +1,55 @@
+<div class="mission-list-container">
+    <h1 class="mat-headline">SpaceX Mission Launch List</h1>
+
+    <app-missionfilter 
+    (yearChange)="onYearChange($event)"
+    (successFilterChange)="onSuccessFilterChange($event)">
+  </app-missionfilter>
+    
+    
+    <div *ngIf="loading" class="loading">
+      <p>Loading missions...</p>
+    </div>
+    
+    <div *ngIf="error" class="error">
+      <p>{{ error }}</p>
+    </div>
+    
+    <div *ngIf="!loading && !error && filteredMissions.length === 0" class="no-missions">
+      <p>No missions found for the selected filter.</p>
+    </div>
+    
+    <div class="mission-cards">
+      <mat-card *ngFor="let mission of filteredMissions" class="mission-card">
+        <div class="mission-header">
+          <div *ngIf="mission.links.mission_patch_small" class="mission-patch">
+            <img [src]="mission.links.mission_patch_small" alt="Mission patch">
+          </div>
+          <div class="mission-title">
+            <mat-card-title>{{ mission.mission_name }}</mat-card-title>
+            <mat-card-subtitle>{{ mission.launch_year }}</mat-card-subtitle>
+          </div>
+        </div>
+        
+        <mat-card-content>
+          <div class="mission-status" [class.success]="mission.launch_success === true" [class.failed]="mission.launch_success === false" [class.unknown]="mission.launch_success === null">
+            <span *ngIf="mission.launch_success === true">✓ Successful</span>
+            <span *ngIf="mission.launch_success === false">✗ Failed</span>
+            <span *ngIf="mission.launch_success === null">? Unknown</span>
+          </div>
+          <p *ngIf="mission.details">{{ mission.details }}</p>
+          <p *ngIf="!mission.details">No details available for this mission.</p>
+          
+          <p class="rocket-info">
+            <strong>Rocket:</strong> {{ mission.rocket.rocket_name }} ({{ mission.rocket.rocket_type }})
+          </p>
+        </mat-card-content>
+        
+        <mat-card-actions>
+          <button mat-button color="primary" (click)="viewMissionDetails(mission.flight_number)">
+            VIEW DETAILS
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>

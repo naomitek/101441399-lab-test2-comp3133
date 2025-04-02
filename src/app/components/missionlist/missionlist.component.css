@@ -1,0 +1,56 @@
+/* missionlist.component.css */
+
+.mission-list-container {
+  background-color: #e3f2fd; /* Light blue background */
+  padding: 20px;
+}
+
+.mission-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.mission-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mission-patch {
+  margin-right: 15px;
+}
+
+.mission-patch img {
+  width: 80px;
+  height: auto;
+}
+
+.mission-title {
+  flex-grow: 1;
+}
+
+.mission-status {
+  margin-bottom: 10px;
+}
+
+.success {
+  color: green;
+}
+
+.failed {
+  color: red;
+}
+
+.unknown {
+  color: gray;
+}
+
+.rocket-info {
+  margin-top: 10px;
+}

@@ -1,0 +1,63 @@
+.filter-container {
+  margin: 30px;
+  padding: 20px;
+  background-color: blanchedalmond;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+
+.filter-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+}
+
+.filter-form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+mat-form-field {
+  min-width: 240px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #165d75;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+mat-form-field:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+mat-label {
+  color: #455a64;
+  font-weight: 600;
+  font-size: 17px;
+  transition: color 0.2s ease-in-out;
+}
+
+mat-label:hover {
+  color: #0288d1;
+}
+
+.success-filter {
+  display: flex;
+  align-items: center;
+  background-color: #03a9f4;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.success-filter:hover {
+  background-color: #0288d1;
+  transform: scale(1.1);
+}

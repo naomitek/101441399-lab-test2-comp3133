@@ -1,0 +1,74 @@
+<div class="mission-details-container">
+    <button mat-icon-button class="back-button" (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    
+    <h1 class="mat-headline">SpaceX Mission Details</h1>
+    
+    <div *ngIf="loading" class="loading">
+      <p>Loading mission details...</p>
+    </div>
+    
+    <div *ngIf="error" class="error">
+      <p>{{ error }}</p>
+    </div>
+    
+    <div *ngIf="!loading && !error && mission" class="details-content">
+      <div class="mission-header">
+        <div class="mission-patch" *ngIf="mission.links.mission_patch_small">
+          <img [src]="mission.links.mission_patch_small" alt="Mission patch">
+        </div>
+        
+        <div class="mission-info">
+          <h2 class="mission-title">Mission - {{ mission.mission_name }}</h2>
+          <p class="mission-date">Name: {{ mission.mission_name }}</p>
+          <p class="mission-date">Launch Year: {{ mission.launch_year }}</p>
+        </div>
+      </div>
+      
+      <mat-divider></mat-divider>
+      
+      <div class="rocket-section">
+        <h3>Rocket</h3>
+        <p>Name: {{ mission.rocket.rocket_name }}</p>
+        <p>Type: {{ mission.rocket.rocket_type }}</p>
+      </div>
+      
+      <mat-divider></mat-divider>
+      
+      <div class="launch-section">
+        <h3>Launch Site</h3>
+        <p>Name: {{ mission.launch_site.site_name_long }}</p>
+      </div>
+      
+      <mat-divider></mat-divider>
+      
+      <div class="details-section">
+        <h3>Launch Details</h3>
+        <p *ngIf="mission.details">{{ mission.details }}</p>
+        <p *ngIf="!mission.details">No details available for this mission.</p>
+      </div>
+      
+      <mat-divider></mat-divider>
+      
+      <div class="links-section">
+        <h3>More Info on Launch Details</h3>
+        <div class="links-buttons">
+          <a mat-raised-button color="primary" [href]="mission.links.article_link" target="_blank" *ngIf="mission.links.article_link">
+            <mat-icon>article</mat-icon>
+            Article
+          </a>
+          
+          <a mat-raised-button color="accent" [href]="mission.links.wikipedia" target="_blank" *ngIf="mission.links.wikipedia">
+            <mat-icon>public</mat-icon>
+            Wikipedia
+          </a>
+          
+          <a mat-raised-button color="warn" [href]="mission.links.video_link" target="_blank" *ngIf="mission.links.video_link">
+            <mat-icon>videocam</mat-icon>
+            Video
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
