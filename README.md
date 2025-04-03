@@ -11,8 +11,7 @@ This Angular application displays and filters SpaceX launch data using the Space
 - Integration with Angular Material for UI components
 
 ## Live Demo
-
-[View the deployed application](https://your-deployment-url-here.com)
+https://101441399-lab-test2-comp3133.vercel.app/missions
 
 ## Installation
 
@@ -87,7 +86,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 - Angular Material
 - TypeScript
 - SpaceX API
-- Deployed on [your-hosting-platform]
+
 
 ## Student Information
 
@@ -95,6 +94,4 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 - **Course**: COMP3133
 - **Lab Test**: 2
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference page](https://angular.io/cli).
