@@ -1,36 +1,65 @@
-# 101441399LabTest2Comp3133
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+# 101441399-lab-test2-comp3133: SpaceX Launch Explorer
+
+This Angular application displays and filters SpaceX launch data using the SpaceX API.
+
+## Features
+
+- View a list of all SpaceX launches
+- Filter missions by launch year
+- View detailed information about each mission
+- Integration with Angular Material for UI components
+
+## Live Demo
+
+[View the deployed application](https://your-deployment-url-here.com)
+
+## Installation
+
+1. Clone the repository:
+```
+git clone https://github.com/your-username/101441399-lab-test2-comp3133.git
+cd 101441399-lab-test2-comp3133
+```
+
+2. Install dependencies:
+```
+npm install
+```
 
 ## Development server
 
 To start a local development server, run:
-
-```bash
+```
 ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Project Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Components**
+  - `missionlist`: Displays a list of all SpaceX launches
+  - `missionfilter`: Allows filtering missions by launch year
+  - `missiondetails`: Shows detailed information about a selected mission
 
-```bash
-ng generate component component-name
-```
+- **Services**
+  - `spacex.service.ts`: Handles API calls to the SpaceX API
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Models**
+  - `mission.ts`: Interface defining the structure of mission data
 
-```bash
-ng generate --help
-```
+## API Reference
 
-## Building
+This application uses the SpaceX REST API to fetch launch data:
+- SpaceX Launches API: https://api.spacexdata.com/v3/launches
+- SpaceX Launch Filter API: https://api.spacexdata.com/v3/launches?launch_year=[YEAR]
+- SpaceX Mission Details API: https://api.spacexdata.com/v3/launches/[FLIGHT_NUMBER]
+
+## Building for production
 
 To build the project run:
-
-```bash
+```
 ng build
 ```
 
@@ -38,23 +67,34 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 ## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
+To execute unit tests with the Karma test runner, use the following command:
+```
 ng test
 ```
 
 ## Running end-to-end tests
 
 For end-to-end (e2e) testing, run:
-
-```bash
+```
 ng e2e
 ```
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+## Technologies Used
+
+- Angular 19.2.6
+- Angular Material
+- TypeScript
+- SpaceX API
+- Deployed on [your-hosting-platform]
+
+## Student Information
+
+- **Student ID**: 101441399
+- **Course**: COMP3133
+- **Lab Test**: 2
+
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# 101441399-lab-test2-comp3133
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference page](https://angular.io/cli).
